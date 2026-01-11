@@ -1,0 +1,7 @@
+:host {
+  display: contents;
+}
+
+:host ::ng-deep .title_withReservedSpaceOnRight {
+  padding-right: 2.4rem;
+}

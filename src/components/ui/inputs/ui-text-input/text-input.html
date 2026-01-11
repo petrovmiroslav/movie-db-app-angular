@@ -1,0 +1,15 @@
+<div [class]="'wrapper ' + class()">
+  <input
+    [class]="'input ' + inputClassName()"
+    [class.input_withLeftIcon]="leftIcon()"
+    [formControl]="formControl()"
+    [placeholder]="placeholder()"
+    [autofocus]="autofocus()"
+    (focus)="focus.emit($event)"
+    (blur)="blur.emit($event)"
+  />
+
+  @if (leftIcon()) {
+    <span class="iconContainer iconContainer_left"><ng-content select="[leftIcon]" /></span>
+  }
+</div>

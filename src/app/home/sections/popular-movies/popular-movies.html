@@ -1,0 +1,6 @@
+@if (moviesList()?.length) {
+  <section class="contentContainer">
+    <app-ui-section-header>Popular</app-ui-section-header>
+    <app-movies-slider [moviesList]="moviesList()" (onEndReached)="onLoadMore()" />
+  </section>
+}

@@ -1,0 +1,10 @@
+<button
+  matButton="filled"
+  disableRipple
+  [type]="type()"
+  [attr.aria-label]="ariaLabel()"
+  [disabled]="disabled()"
+  [class]="'interactive ui-button ' + class()"
+>
+  <ng-content />
+</button>

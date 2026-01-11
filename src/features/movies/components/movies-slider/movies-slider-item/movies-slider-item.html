@@ -1,0 +1,13 @@
+<app-ui-link [routerLink]="link()"
+  ><app-poster
+    [class]="'posterContainer'"
+    [baseUrl]="baseUrl()"
+    [title]="title()"
+    [posterPath]="posterPath()"
+  />
+  <app-title-movie-card [class]="'title'">{{ title() }}</app-title-movie-card>
+  <app-genres-names [class]="'genres'" [genreList]="genreList()" [genreIdList]="genreIdList()" />
+  @if (roundedVote() !== undefined) {
+    <p class="voteAverage">{{ roundedVote() }}</p>
+  }
+</app-ui-link>

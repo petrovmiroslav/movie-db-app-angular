@@ -1,0 +1,12 @@
+:host {
+  display: contents;
+}
+
+:host ::ng-deep .genres {
+  font: var(--fonts__s);
+}
+
+.voteAverage {
+  margin-top: var(--dp__16);
+  color: var(--colors__primary);
+}

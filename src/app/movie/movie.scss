@@ -1,0 +1,11 @@
+:host {
+  display: contents;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: visible;
+}

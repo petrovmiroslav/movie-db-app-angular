@@ -1,0 +1,13 @@
+<section class="contentContainer">
+  <app-ui-section-header>Genres</app-ui-section-header>
+  <div [class]="'slider'">
+    @for (genre of genreListQuery.data()?.genres; track genre.id) {
+      <app-ui-link
+        [class]="'item'"
+        [routerLink]="'/' + APP_PATHS.discover()"
+        [queryParams]="{ with_genres: genre.id }"
+        ><span [class]="'text'">{{ genre.name }}</span></app-ui-link
+      >
+    }
+  </div>
+</section>

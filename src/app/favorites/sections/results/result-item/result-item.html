@@ -1,0 +1,26 @@
+<app-movie-card-horizontal
+  [id]="movieId()"
+  [baseUrl]="imageConfiguration().secureBaseUrl"
+  [title]="movieData().title"
+  [posterPath]="movieData().posterPath"
+>
+  <app-title-movie-card>{{ movieData().title }}</app-title-movie-card>
+  <app-original-title-movie-card
+    >{{ movieData().originalTitle }}{{ movieData().originalTitle && releaseDateFormatted() && ', '
+    }}{{ releaseDateFormatted() }}</app-original-title-movie-card
+  >
+  <app-genres-names
+    [class]="'genres'"
+    [genreIdList]="movieData().genresIds"
+    [genreList]="movieData().genres"
+  />
+
+  <div class="row">
+    @if (roundedVote() !== undefined) {
+      <p class="voteAverage"
+        >{{ roundedVote() }} <span class="duration">{{ formattedDuration() }}</span></p
+      >
+    }
+    <p class="favoriteDate">{{ formattedFavoriteDate() }}</p>
+  </div>
+</app-movie-card-horizontal>

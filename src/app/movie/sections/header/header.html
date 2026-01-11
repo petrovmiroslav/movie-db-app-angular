@@ -1,0 +1,10 @@
+<app-page-header-layout
+  [shadowStyle]="hiddenElementStyle()"
+  [backgroundStyle]="hiddenElementStyle()"
+>
+  <app-ui-back-button
+    [class]="hiddenElementsOpacity() < 0.5 ? 'backButton_insideHeaderTransparent' : ''" />
+
+  <app-screen-header-title className="title" [style]="hiddenElementStyle()"
+    ><ng-content /></app-screen-header-title
+></app-page-header-layout>

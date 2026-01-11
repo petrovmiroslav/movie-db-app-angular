@@ -1,0 +1,12 @@
+@if (imageList()?.length) {
+  <app-ui-section-header [class]="'sectionHeader'">{{ headerText() }}</app-ui-section-header>
+  <div class="container">
+    @for (image of imageList(); track image.id) {
+      <div class="item">
+        <div class="item__imgContainer" [class.item__imgContainer_poster]="isPosters()">
+          <app-image [src]="image.filePath" [baseUrl]="baseUrl()" [alt]="title()" />
+        </div>
+      </div>
+    }
+  </div>
+}

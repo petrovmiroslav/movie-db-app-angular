@@ -1,0 +1,7 @@
+{
+  "https://image.tmdb.org": {
+    "target": "https://image.tmdb.org",
+    "changeOrigin": true,
+    "secure": false
+  }
+}

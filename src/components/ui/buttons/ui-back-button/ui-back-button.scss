@@ -1,0 +1,24 @@
+:host {
+  display: contents;
+}
+
+:host(.ui-back-button-host) ::ng-deep .ui-back-button {
+  margin-left: calc(-1 * var(--dp__16));
+  padding: var(--dp__8) var(--dp__16);
+  border-radius: var(--dp__8);
+  background-color: unset;
+  color: var(--colors__background_dark);
+  height: auto;
+  min-width: unset;
+
+  &:disabled {
+    background-color: unset;
+    color: var(--colors__background_dark);
+  }
+}
+
+.icon {
+  display: block;
+  width: var(--dp__8);
+  height: var(--dp__16);
+}

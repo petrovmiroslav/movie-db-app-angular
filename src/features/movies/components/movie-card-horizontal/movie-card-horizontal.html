@@ -1,0 +1,10 @@
+<app-ui-link [class]="'card'" [routerLink]="link()"
+  ><app-poster
+    [class]="'poster'"
+    [baseUrl]="baseUrl()"
+    [title]="title()"
+    [posterPath]="posterPath()"
+  />
+  <div class="content"><ng-content /></div
+  ><span class="icon" app-ui-masked-icon [icon]="'ArrowLeft'"></span>
+</app-ui-link>

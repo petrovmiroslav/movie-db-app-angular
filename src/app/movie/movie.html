@@ -1,0 +1,31 @@
+@let id = movieId();
+@if (id !== null) {
+  <div [class]="'container'">
+    <app-header [heroImageVisibleHeight]="heroImageVisibleHeight()" [scrollY]="scrollY()">{{
+      movieData().title
+    }}</app-header>
+
+    <app-hero
+      [id]="id"
+      [title]="movieData().title"
+      [originalTitle]="movieData().originalTitle"
+      [voteAverage]="movieData().voteAverage"
+      [releaseDate]="movieData().releaseDate"
+      [runtime]="movieData().runtime"
+      [backdropPath]="movieData().backdropPath"
+      [genreIdList]="movieData().genresIds"
+      [genreList]="movieData().genres"
+      [(heroImageVisibleHeight)]="heroImageVisibleHeight"
+      [scrollY]="scrollY()"
+    />
+
+    <app-content
+      [id]="id"
+      [title]="movieData().title"
+      [tagline]="movieData().tagline"
+      [overview]="movieData().overview"
+      [backdrops]="movieData().images?.backdrops"
+      [posters]="movieData().images?.posters"
+    />
+  </div>
+}

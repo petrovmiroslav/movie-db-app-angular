@@ -1,0 +1,23 @@
+<section class="contentContainer container">
+  @if (tagline()) {
+    <p class="tagline">{{ tagline() }}</p>
+  }
+  @if (overview()) {
+    <p class="overview">{{ overview() }}</p>
+  }
+  <app-movie-images-slider
+    headerText="Posters"
+    [isPosters]="true"
+    [title]="title()"
+    [baseUrl]="imageConfiguration().secureBaseUrl"
+    [imageList]="posters()"
+  />
+  <app-movie-images-slider
+    headerText="Backdrops"
+    [title]="title()"
+    [baseUrl]="imageConfiguration().secureBaseUrl"
+    [imageList]="backdrops()"
+  />
+  <app-recommendations-movies-slider [movieId]="id()" />
+  <app-similar-movies-slider [movieId]="id()" />
+</section>

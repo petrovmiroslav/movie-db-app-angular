@@ -1,0 +1,24 @@
+<app-page-header-layout [shadowStyle]="shadowStyle()"
+  ><app-ui-text-input
+    [formControl]="searchControl"
+    placeholder="Search"
+    [autofocus]="true"
+    (focus)="expandClearButton()"
+    (blur)="collapseClearButton()"
+    ><span
+      #leftIcon
+      leftIcon
+      class="icon"
+      app-ui-masked-icon
+      [icon]="'Search'"
+    ></span></app-ui-text-input
+  ><button
+    #searchClearButton
+    class="interactive clearButton"
+    [class.clearButton__expanded]="isClearButtonExpanded()"
+    (click)="onSearchClearClickHandler()"
+    (focus)="expandClearButton()"
+    (blur)="collapseClearButton()"
+    ><span class="clearButton__text">clear</span>
+  </button></app-page-header-layout
+>

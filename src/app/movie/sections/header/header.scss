@@ -1,0 +1,11 @@
+:host {
+  display: contents;
+}
+
+:host ::ng-deep .ui-button.ui-back-button.backButton_insideHeaderTransparent {
+  color: var(--colors__background_light);
+}
+
+:host ::ng-deep .title {
+  padding-right: 2.4rem;
+}

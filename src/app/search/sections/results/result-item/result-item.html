@@ -1,0 +1,16 @@
+<app-movie-card-horizontal
+  [id]="id()"
+  [baseUrl]="baseUrl()"
+  [title]="title()"
+  [posterPath]="posterPath()"
+>
+  <app-title-movie-card>{{ title() }}</app-title-movie-card>
+  <app-original-title-movie-card
+    >{{ originalTitle() }}{{ originalTitle() && releaseDateFormatted() && ', '
+    }}{{ releaseDateFormatted() }}</app-original-title-movie-card
+  >
+  <app-genres-names [class]="'genres'" [genreList]="genreList()" [genreIdList]="genreIdList()" />
+  @if (roundedVote() !== undefined) {
+    <p class="voteAverage">{{ roundedVote() }}</p>
+  }
+</app-movie-card-horizontal>

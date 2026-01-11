@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "movie-db-app-angular",
+  "public": true,
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.js" }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/movie-db-app-angular/**"
+    }
+  }
+}

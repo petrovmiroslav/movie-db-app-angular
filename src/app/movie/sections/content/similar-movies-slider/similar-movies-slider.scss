@@ -1,0 +1,7 @@
+:host {
+  display: contents;
+}
+
+:host ::ng-deep .sectionHeader {
+  margin-top: var(--dp__24);
+}

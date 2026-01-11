@@ -1,0 +1,5 @@
+<section class="contentContainer container">
+  @for (favorite of favoriteList(); track favorite.id) {
+    <app-result-item [entityId]="favorite.entityId" [date]="favorite.date" />
+  }
+</section>

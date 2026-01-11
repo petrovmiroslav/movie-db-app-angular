@@ -1,0 +1,18 @@
+<div class="slider" waIntersectionRoot>
+  @for (movie of moviesList(); track movie.id) {
+    <app-movies-slider-item
+      [id]="movie.id"
+      [baseUrl]="imageConfiguration().secureBaseUrl"
+      [title]="movie.title"
+      [genreIdList]="movie.genresIds"
+      [genreList]="movie.genres"
+      [posterPath]="movie.posterPath"
+      [voteAverage]="movie.voteAverage"
+    />
+  }
+  <div
+    waIntersectionObserver
+    waIntersectionRootMargin="0px 100% 0px 0px"
+    (waIntersectionObservee)="onIntersection($event)"
+  ></div>
+</div>

@@ -1,0 +1,34 @@
+<section class="contentContainer container">
+  <div #imageContainer class="imageContainer" [style]="containerStyle()">
+    <app-image
+      [class.image_hidden]="!heroImageVisibleHeight()"
+      [src]="backdropPath() ?? ''"
+      [baseUrl]="imageConfiguration().secureBaseUrl"
+      [alt]="title()"
+    />
+  </div>
+  <div class="content">
+    <h2 class="title">
+      {{ title() }}
+    </h2>
+    <p class="text">
+      @if (roundedVote() !== undefined) {
+        <span class="text text_vote">{{ roundedVote() }}</span>
+      }
+      {{ originalTitle() }}
+    </p>
+
+    <p class="text"
+      >{{ releaseDateFormatted() }}{{ releaseDateFormatted() && formattedDuration() && ', '
+      }}{{ formattedDuration() }}
+    </p>
+
+    <app-genres-names
+      [class]="'text text_genres'"
+      [genreList]="genreList()"
+      [genreIdList]="genreIdList()"
+    />
+
+    <app-favorite-button [class]="'favoriteButton'" [id]="id()" />
+  </div>
+</section>

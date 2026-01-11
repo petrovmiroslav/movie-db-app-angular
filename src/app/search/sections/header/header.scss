@@ -1,0 +1,32 @@
+:host {
+  display: contents;
+}
+
+.icon {
+  width: var(--dp__24);
+  height: var(--dp__24);
+  color: var(--colors__font_light);
+}
+
+.clearButton {
+  max-width: 0;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: var(--dp__8);
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-width 0.15s ease-in-out,
+    opacity 0.05s ease-in-out;
+}
+
+.clearButton__expanded {
+  max-width: 30%;
+  opacity: 1;
+}
+
+.clearButton__text {
+  display: block;
+  padding: var(--dp__8);
+}

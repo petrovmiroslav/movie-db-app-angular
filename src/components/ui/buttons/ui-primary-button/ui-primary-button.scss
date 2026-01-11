@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+
+:host {
+  display: contents;
+
+  @include mat.button-overrides(
+    (
+      filled-container-color: var(--colors__primary),
+      filled-label-text-color: var(--colors__background_light),
+      filled-horizontal-padding: var(--dp__24),
+      filled-container-shape: var(--dp__8),
+      filled-touch-target-size: 100%,
+      filled-container-height: 4.6rem,
+      filled-label-text-transform: uppercase,
+    )
+  );
+
+  & ::ng-deep .ui-primary-button {
+    --focus-visible-outline-color: var(--colors__background_very_dark);
+
+    box-shadow: var(--shadow__2dp);
+
+    &:focus-visible {
+      box-shadow: inset 0 0 0 2px var(--focus-visible-outline-color);
+      outline: 0;
+    }
+
+    &:disabled {
+      background-color: var(--colors__primary);
+      color: var(--colors__background_light);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<section class="contentContainer container">
+  @for (movie of moviesList(); track movie.id) {
+    <app-result-item
+      [id]="movie.id"
+      [baseUrl]="imageConfiguration().secureBaseUrl"
+      [title]="movie.title"
+      [originalTitle]="movie.originalTitle"
+      [releaseDate]="movie.releaseDate"
+      [genreIdList]="movie.genresIds"
+      [genreList]="movie.genres"
+      [posterPath]="movie.posterPath"
+      [voteAverage]="movie.voteAverage"
+    />
+  }
+  <div
+    waIntersectionObserver
+    waIntersectionRootMargin="0px 0px 100%"
+    (waIntersectionObservee)="onIntersection($event)"
+  ></div>
+</section>

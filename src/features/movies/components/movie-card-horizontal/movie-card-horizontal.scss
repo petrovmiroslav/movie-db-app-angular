@@ -1,0 +1,34 @@
+:host {
+  display: contents;
+}
+
+:host ::ng-deep .card {
+  display: flex;
+  padding: var(--dp__8);
+  border-radius: var(--dp__8);
+  background-color: var(--colors__background_light);
+  box-shadow: var(--shadow__2dp);
+  color: var(--colors__font_dark);
+
+  &:focus-visible {
+    box-shadow: inset 0 0 0 2px var(--focus-visible-outline-color);
+  }
+}
+
+.poster {
+  min-width: 7rem;
+}
+
+.content {
+  min-width: 0;
+  margin-left: var(--dp__8);
+  padding: var(--dp__8) 0;
+  flex: 1;
+}
+
+.icon {
+  width: var(--dp__8);
+  margin: auto var(--dp__8);
+  transform: rotate(180deg);
+  color: var(--colors__background_dark);
+}

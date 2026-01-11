@@ -1,0 +1,9 @@
+:host {
+  display: contents;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dp__8);
+}

@@ -1,0 +1,7 @@
+<app-ui-button
+  [disabled]="disabled()"
+  [class]="'ui-back-button ' + class()"
+  (click)="onClick()"
+  aria-label="go back"
+  ><span class="icon" app-ui-masked-icon [icon]="'ArrowLeft'"></span
+></app-ui-button>

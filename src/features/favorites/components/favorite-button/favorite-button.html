@@ -1,0 +1,18 @@
+<app-ui-button
+  [disabled]="addToFavoritesMutation.isPending() || removeFromFavoritesMutation.isPending()"
+  [class]="'button ' + class()"
+  (click)="onClick()"
+  [ariaLabel]="isFavorite() ? 'remove from favorites' : 'add to favorites'"
+  ><span
+    class="absoluteCenter icon"
+    [class.icon_hidden]="isFavorite()"
+    app-ui-masked-icon
+    icon="FavoritesOutlined"
+  ></span
+  ><span
+    class="absoluteCenter icon"
+    [class.icon_hidden]="!isFavorite()"
+    app-ui-masked-icon
+    icon="FavoritesFilled"
+  ></span
+></app-ui-button>

@@ -1,0 +1,7 @@
+<app-page-header-layout [shadowStyle]="shadowStyle()">
+  @if (withBackButton()) {
+    <app-ui-back-button />
+  }
+  <app-screen-header-title [className]="withBackButton() ? 'title_withReservedSpaceOnRight' : ''"
+    ><ng-content /></app-screen-header-title
+></app-page-header-layout>

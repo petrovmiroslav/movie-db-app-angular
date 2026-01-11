@@ -1,0 +1,8 @@
+<header [class]="'contentContainer pageHeader ' + className()" #header>
+  <div [class]="'absoluteCenter shadow ' + shadowClassName()" [style]="shadowStyle()"></div>
+  <div
+    [class]="'absoluteCenter background' + backgroundClassName()"
+    [style]="backgroundStyle()"
+  ></div>
+  <ng-content />
+</header>

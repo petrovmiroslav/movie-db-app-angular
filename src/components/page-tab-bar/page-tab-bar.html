@@ -1,0 +1,17 @@
+<nav [class]="'contentContainer pageTabBar'">
+  <ul [class]="'list'">
+    @for (tabData of tabDataList; track tabData.path) {
+      <li [class]="'itemContainer'">
+        <app-ui-link
+          [class]="'item'"
+          [routerLink]="tabData.path"
+          routerLinkActive="item_selected"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <span class="icon" app-ui-masked-icon [icon]="tabData.icon"></span
+          >{{ tabData.title }}</app-ui-link
+        >
+      </li>
+    }
+  </ul>
+</nav>
