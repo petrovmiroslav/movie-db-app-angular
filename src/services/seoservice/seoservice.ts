@@ -20,6 +20,10 @@ export class SEOService {
       content:
         'Movies, TV Shows, Streaming, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast',
     });
+    this.meta.updateTag({
+      name: 'robots',
+      content: 'noindex, nofollow',
+    });
   }
 
   updateTitle(newTitle: string) {
