@@ -2,6 +2,8 @@ import { ConfigurationApiPaths } from '../../features/configuration/api/constant
 import { GenresApiPaths } from '../../features/genres/api/constants';
 import { MoviesApiPaths } from '../../features/movies/api/constants';
 
+export const CLIENT_SIDE_BASE_URL = '/api';
+
 export const DEFAULT_INCLUDE_LANGUAGE_PARAM = `en,null`;
 
 export type LanguageApiParams = {
